@@ -20,7 +20,7 @@ sns.set()
 
 def import_data(pth):
     '''
-    returns dataframe for the csv found at pth
+    Returns dataframe for the csv found at pth.
 
     input:
             pth: string path to the csv
@@ -33,7 +33,7 @@ def import_data(pth):
 
 def perform_eda(df):
     '''
-    perform eda on df and save figures to images folder
+    Perform eda on df and save figures to images folder.
     input:
             df: pandas dataframe
     output:
@@ -70,8 +70,8 @@ def perform_eda(df):
 
 def encoder_helper(df, category_lst, response='Churn'):
     '''
-    helper function to turn each categorical column into a new column with
-    propotion of churn for each category - associated with cell 15 from the notebook
+    Helper function to turn each categorical column into a new column with
+    propotion of churn for each category. 
 
     input:
             df: pandas dataframe
@@ -95,6 +95,7 @@ def encoder_helper(df, category_lst, response='Churn'):
 
 def perform_feature_engineering(df, feat_lst, response='Churn'):
     '''
+    Split the data into train and test.
     input:
               df: pandas dataframe
               feat_lst: list of features to keep for model development
@@ -122,8 +123,8 @@ def classification_report_image(y_train,
                                 y_test_preds_lr,
                                 y_test_preds_rf):
     '''
-    produces classification report for training and testing results and stores report as image
-    in images folder
+    Produces classification report for training and testing results and stores report as image
+    in images folder.
     input:
             y_train: training response values
             y_test:  test response values
@@ -184,7 +185,7 @@ def classification_report_image(y_train,
 
 def feature_importance_plot(model, X_data, output_pth):
     '''
-    creates and stores the feature importances in pth
+    Creates and stores the feature importances in pth.
     input:
             model: model object containing feature_importances_
             X_data: pandas dataframe of X values
@@ -222,7 +223,7 @@ def feature_importance_plot(model, X_data, output_pth):
 
 def train_models(X_train, X_test, y_train, y_test):
     '''
-    train, store model results: images + scores, and store models
+    Train, store model results: images + scores, and store models.
     input:
               X_train: X training data
               X_test: X testing data
