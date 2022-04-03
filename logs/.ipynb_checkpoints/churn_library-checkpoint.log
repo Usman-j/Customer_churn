@@ -1,0 +1,6 @@
+root - INFO - Testing import_data: SUCCESS
+root - INFO - Testing perform_eda: SUCCESS: All images were saved
+root - INFO - Testing encoder_helper: SUCCESS: All categorical features were processed
+root - INFO - Testing encoder_helper: SUCCESS: All categorical have been encoded
+root - INFO - Testing perform_feature_engineering: SUCCESS: Data split into train and test
+root - INFO - Testing train_models: SUCCESS: All files related to model training have been saved

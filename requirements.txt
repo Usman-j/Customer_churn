@@ -1,6 +1,6 @@
 altair==1.2.1
 asn1crypto==0.22.0
-astroid==2.9.3
+astroid==2.11.2
 atari-py==0.1.7
 atomicwrites==1.3.0
 attrs==19.1.0
@@ -80,6 +80,7 @@ jupyter-core==4.4.0
 jupyterlab==1.0.9
 jupyterlab-server==1.0.0
 Keras==2.0.9
+kiwisolver==1.3.1
 lazy-object-proxy==1.7.1
 librosa==0.5.1
 llvmlite==0.20.0
@@ -89,8 +90,8 @@ lxml==4.1.1
 Mako==1.0.7
 Markdown==2.6.9
 MarkupSafe==1.0
-matplotlib==2.1.0
-mccabe==0.6.1
+matplotlib==3.3.4
+mccabe==0.7.0
 mistune==0.8.3
 mock==2.0.0
 monotonic==1.3
@@ -107,7 +108,7 @@ nltk==3.2.5
 notebook==5.7.0
 numba==0.35.0
 numexpr==2.6.4
-numpy==1.12.1
+numpy==1.19.5
 oauthlib==2.0.6
 olefile==0.44
 openpyxl==2.5.0b1
@@ -120,7 +121,7 @@ patsy==0.4.1
 pbr==3.1.1
 pexpect==4.3.1
 pickleshare==0.7.4
-Pillow==5.2.0
+Pillow==8.4.0
 pinyin==0.4.0
 platformdirs==2.4.0
 plotly==2.0.15
@@ -146,7 +147,7 @@ pyglet==1.3.0
 Pygments==2.2.0
 pygpu==0.7.5
 PyJWT==1.5.3
-pylint==2.12.2
+pylint==2.13.4
 pymavlink==2.2.20
 pymc3==3.2
 PyOpenGL==3.1.0
@@ -175,7 +176,7 @@ s3transfer==0.1.13
 scikit-image==0.14.2
 scikit-learn==0.22
 scipy==1.2.1
-seaborn==0.8.1
+seaborn==0.11.2
 SeekWell==0.1
 Send2Trash==1.5.0
 shap==0.40.0
@@ -196,11 +197,12 @@ terminado==0.8.1
 testpath==0.3.1
 Theano==1.0.1
 toml==0.10.2
+tomli==1.2.3
 toolz==0.8.2
 torch==0.4.0
 torchvision==0.2.1
 tornado==4.5.3
-tqdm==4.63.0
+tqdm==4.63.1
 traitlets==4.3.2
 tweepy==3.5.0
 twython==3.6.0
@@ -219,6 +221,6 @@ Werkzeug==0.14.1
 widgetsnbextension==3.1.0
 wordcloud==1.4.1
 wptools==0.4.7
-wrapt==1.13.3
+wrapt==1.14.0
 xlrd==1.1.0
 zipp==3.6.0
