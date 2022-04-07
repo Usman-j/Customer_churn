@@ -1,5 +1,8 @@
 '''
-Script for testing all the functions of churn_library and corresponding logging.
+Script for testing all the modules of churn_library and corresponding logging.
+
+Author: Usman
+Date Created: 07-April-2022
 '''
 
 import os

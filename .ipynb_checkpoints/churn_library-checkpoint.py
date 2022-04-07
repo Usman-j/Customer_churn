@@ -1,9 +1,20 @@
 # library doc string
 '''
-Library for developig Customer churn prediction model.
+Library for developig Customer churn prediction model. It contains the modules required for:
+- Data Import
+- Performing Exploratory Data Analysis (EDA) and saving respective figures.
+- Processing Categorical features.
+- Data splitting.
+- Generating and saving model classification reports.
+- Plotting and saving feature importance.
+- Training and saving models.
+
+Author: Usman
+Date Created: 07-April-2022
 '''
 
 # import libraries
+import os
 from sklearn.metrics import plot_roc_curve, classification_report
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
@@ -14,7 +25,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from constants import MODELS_path, EDA_path, RESULTS_path
+from constants import (DATA_path, MODELS_path, EDA_path, RESULTS_path,
+                       categorical_feats_lst, final_feats_lst)
+os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 sns.set()
 
 
@@ -71,7 +84,7 @@ def perform_eda(df):
 def encoder_helper(df, category_lst, response='Churn'):
     '''
     Helper function to turn each categorical column into a new column with
-    propotion of churn for each category. 
+    propotion of churn for each category.
 
     input:
             df: pandas dataframe
@@ -283,3 +296,14 @@ def train_models(X_train, X_test, y_train, y_test):
     # Saving Feature importance for RF model
     rfc_model = joblib.load(MODELS_path + 'rfc_model.pkl')
     feature_importance_plot(rfc_model, X_train, RESULTS_path)
+
+
+if __name__ == "__main__":
+    df_data = import_data(DATA_path)
+    df_data['Churn'] = df_data['Attrition_Flag'].apply(
+        lambda val: 0 if val == "Existing Customer" else 1)
+    perform_eda(df_data)
+    df_Encoded = encoder_helper(df_data, categorical_feats_lst)
+    X_Train, X_Test, y_Train, y_Test = perform_feature_engineering(
+        df_Encoded, final_feats_lst)
+    train_models(X_Train, X_Test, y_Train, y_Test)

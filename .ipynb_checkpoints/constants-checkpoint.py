@@ -1,5 +1,8 @@
 '''
 This file contains the constant values required by churn_library
+
+Author: Usman
+Date Created: 07-April-2022
 '''
 DATA_path = './data/bank_data.csv'
 MODELS_path = './models/'
